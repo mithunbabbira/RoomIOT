@@ -5,88 +5,109 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    android:background="#FF5722"
+    android:background="#FF9800"
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="ROOM IOT"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp"
-        android:weightSum="2">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-
-
-            android:weightSum="2">
-
-            <Button
-                android:id="@+id/lightOnbtn"
-
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/mybutton"
-                android:text="light On"
-                android:textColor="#fff"
-                tools:layout_editor_absoluteX="96dp"
-                tools:layout_editor_absoluteY="213dp" />
-
-            <Button
-                android:id="@+id/lightOffBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-
-                android:background="@drawable/mybutton"
-                android:text="light Off"
-                android:textColor="#fff"
-                tools:layout_editor_absoluteX="222dp"
-                tools:layout_editor_absoluteY="208dp" />
-
-        </LinearLayout>
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal"
+        <Button
+            android:id="@+id/lightOnbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/control_btn"
+            android:text="On"
+            android:textColor="#FFF" />
 
-            android:weightSum="2">
-
-            <Button
-                android:id="@+id/fanOnBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/mybutton"
-                android:text="fan On"
-                android:textColor="#fff"
-                tools:layout_editor_absoluteX="107dp"
-                tools:layout_editor_absoluteY="305dp" />
-
-            <Button
-                android:id="@+id/fanOffBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-
-                android:background="@drawable/mybutton"
-                android:text="fan OFF"
-                android:textColor="#fff"
-                tools:layout_editor_absoluteX="222dp"
-                tools:layout_editor_absoluteY="298dp" />
-
-        </LinearLayout>
-
+        <Button
+            android:id="@+id/lightOffBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/control_btn"
+            android:text="OFF"
+            android:textColor="#FFF" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:orientation="horizontal"
+
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/fanOnBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/control_btn"
+            android:text="On"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/fanOffBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/control_btn"
+            android:text="OFF"
+            android:textColor="#FFF" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="85dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/light" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="60dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/fan" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
